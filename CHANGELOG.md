@@ -1,4 +1,28 @@
 # OpenAPI-Postman Changelog
+#### v1.2.2 (June 29, 2020)
+* Added support for collection request as suggested value for missing endpoints.
+* Use forked version of oas-resolver to make folder imports work in browser.
+* Fixed issues with collection conforimg to JSON schema validation as per [v2.1.0](https://schema.getpostman.com/json/draft-07/collection/v2.1.0/) schema.
+
+#### v1.2.1 (June 18, 2020)
+* Added support for validating content-type header.
+
+#### v1.2.0 (June 14, 2020)
+* Added support for stricter request matching via option for validation.
+* Added missing endpoints from collection info in result of validation.
+* Suggest fixes in collection for violated properties in validation.
+* Introduced option to validate metadata for validation.
+* Use faked value instead of fallback to schema for parameter resolution when set to example.
+* Use faked value instead of invalid schema defined example.
+* Introduced option to ignore unresolved postman variable mismatches.
+* Fixed invalid generated collection for body type formdata.
+
+#### v1.1.19 (June 12, 2020)
+* Fix for [#232](https://github.com/postmanlabs/openapi-to-postman/issues/232) - Changes default auth of requests to null conforming to the JSON schema.
+
+#### v1.1.18 (June 1, 2020)
+* Fix for [#86](https://github.com/postmanlabs/openapi-to-postman/issues/86) - Now global security schemes will be added at the collection level.
+
 #### v1.1.17 (May 15, 2020)
 * Fix for [#3](https://github.com/postmanlabs/openapi-to-postman/issues/3) [#57](https://github.com/postmanlabs/openapi-to-postman/issues/57) - Introduced a new option `folderStrategy`, can choose between `Tags` or `Path` while creating folders in Postman Collection.
 * Fixed an issue where undefined was returned as error message while trying to import invalid format.
